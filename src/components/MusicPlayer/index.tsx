@@ -71,7 +71,7 @@ const MusicPlayer = () => {
           value={appTime}
           min="0"
           max={duration}
-          onInput={(event: React.ChangeEvent<HTMLInputElement>) => setSeekTime(parseInt(event.target.value))}
+          onInput={(event: React.ChangeEvent<HTMLInputElement>) => setSeekTime(parseFloat(event.target.value))}
           setSeekTime={setSeekTime}
           appTime={appTime}
         />
@@ -91,7 +91,7 @@ const MusicPlayer = () => {
         value={volume}
         min="0"
         max="1"
-        onChange={(event: React.ChangeEvent<HTMLInputElement>) => setVolume(parseInt(event.target.value))}
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) => setVolume(parseFloat(event.target.value))}
         setVolume={setVolume}
       />
     </div>
